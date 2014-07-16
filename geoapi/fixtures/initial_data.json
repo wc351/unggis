@@ -1,0 +1,4 @@
+[
+    {"pk": 1, "model": "geoapi.callbox", "fields": {"geom": "POINT (-83.8486862182609940 34.2586326599120030)", "description": "Blah blah."}},
+    {"pk": 2, "model": "geoapi.callbox", "fields": {"geom": "POINT (-0.7910156250000000 9.2257690429687997)", "description": "CB2"}}
+]

@@ -1,3 +1,4 @@
-from django.contrib import admin
+from django.contrib.gis import admin
+from geoapi import models
 
-# Register your models here.
+admin.site.register(models.CallBox)
