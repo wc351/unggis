@@ -29,7 +29,8 @@ INSTALLED_APPS = (
     'rest_framework',
     'rest_framework_gis',
     'django_filters',
-    'geoapi',
+    'apps.geoapi',
+    'vendor.registration',
 
 )
 
@@ -88,3 +89,11 @@ TEMPLATE_DIRS = (
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',)
 }
+
+
+ABSOLUTE_URL_OVERRIDES = {
+    'auth.user': lambda url: "/",
+
+}
+
+LOGIN_REDIRECT_URL = '/'

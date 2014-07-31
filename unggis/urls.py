@@ -4,5 +4,6 @@ from django.contrib import admin
 urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^geoapi/', include('geoapi.urls', namespace='geoapi')),
+    url(r'^geoapi/', include('apps.geoapi.urls', namespace='geoapi')),
+    url(r'^accounts/', include('vendor.registration.backends.simple.urls')),
     )

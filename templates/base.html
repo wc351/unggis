@@ -1,0 +1,49 @@
+{%  load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href={% static 'base.css' %}>
+</head>
+<body>
+<div id="page">
+    <div id="header">
+        <h1>UNG Data</h1>
+    </div>
+
+    <div id="navigation">
+        <ul>
+
+            {% if user.username %}
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/accounts/logout/">Logout</a></li>
+
+                {% if user.is_staff %}
+
+                <li><a href="/admin/">Admin Page</a></li>
+
+                {% endif %}
+
+            {%  else %}
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/accounts/register/">Registration</a></li>
+
+            <li><a href="/accounts/login/">Login</a></li>
+
+            {% endif %}
+
+        </ul>
+    </div>
+
+    <div id="content">
+    {% block content %}{% endblock %}
+    </div>
+
+<div id="footer"><footer><a href="http://www.wc351.com">2013 wc351</footer></div>
+</div>
+</body>
+</html>
