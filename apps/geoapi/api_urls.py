@@ -10,6 +10,9 @@ urlpatterns = patterns('',
     url(r'^v1/lamps$', json_views.LampCollection.as_view(), name='lamp_collection'),
     url(r'^v1/lamps/(?P<pk>[0-9]+)$', json_views.SingleLampCollection.as_view(), name='single_lamp_collection'),
 
+    url(r'^v1/secure/lamps$', json_views.SecureLampCollection.as_view(), name='secure_lamp_collection'),
+    url(r'^v1/secure/lamps/(?P<pk>[0-9]+)$', json_views.SecureSingleLampCollection.as_view(), name='secure_single_lamp_collection'),
+
     url(r'^v1/parkinglots$', json_views.ParkingLotCollection.as_view(), name='parkinglot_collection'),
     url(r'^v1/parkinglots/(?P<pk>[0-9]+)$', json_views.SingleParkingLotCollection.as_view(),
         name='single_parkinglot_collection'),
